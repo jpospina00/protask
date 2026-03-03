@@ -13,7 +13,7 @@ function App() {
   const [selectedFile, setSelectedFile] = useState<Attachment | null>(null);
   const [loading, setLoading] = useState(false);
 
-  // 📤 Subir archivo + guardar en Firestore
+
   const handleUpload = async (
     event: React.ChangeEvent<HTMLInputElement>
   ) => {
@@ -39,13 +39,13 @@ function App() {
     }
   };
 
-  // 📂 Traer archivos desde Firestore
+
   const loadFiles = async () => {
     const data = await getAttachments();
     setFiles(data as Attachment[]);
   };
 
-  // 🔎 Detectar si es PDF
+
   const isPDF = (url: string) => url.toLowerCase().endsWith(".pdf");
 
   return (

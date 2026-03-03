@@ -19,5 +19,5 @@ export const uploadToCloudinary = async (file: File) => {
   }
 
   const data = await response.json();
-  return data.secure_url; // ← esto guardaremos en Firestore
+  return data.secure_url;
 };
