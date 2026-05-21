@@ -1,4 +1,4 @@
-import type { User } from "../../types/index";
+import type { User } from "../types";
 import { mockUsers } from "../../mocks/data";
 
 const delay = (ms = 400) => new Promise((r) => setTimeout(r, ms));

@@ -1,4 +1,12 @@
-import type { User } from "../../types/index";
+// Local User type to avoid missing-module errors for ../types
+export interface User {
+  id: string;
+  name: string;
+  email: string;
+  password?: string;
+  role: string;
+  avatar?: string;
+}
 import { mockUsers } from "../../mocks/data";
 
 const delay = (ms = 400) => new Promise((r) => setTimeout(r, ms));
